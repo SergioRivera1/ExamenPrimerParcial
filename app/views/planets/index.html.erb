@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- <font color="white"> -->
+<h1 style="text-align: center;">Planetas</h1>
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Ubicacion</th>
+      <th>Km de longitud</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @planets.each do |planet| %>
+      <tr>
+        <td><%= planet.name %></td>
+        <td><%= planet.ubication %></td>
+        <td><%= planet.kmlongitud %></td>
+        <td><%= link_to 'Mostrar', planet %></td>
+        <td><%= link_to 'Editar', edit_planet_path(planet) %></td>
+        <td><%= link_to 'Eliminar', planet, method: :delete, data: { confirm: 'Estas seguro de eliminar?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<!-- </font> -->
+<br>
+<form>
+
+<input class="My Button" onclick="window.location.href='/homes'" type="button" value="Home">
+<input class="My Button" onclick="window.location.href='/planets/new'" type="button" value="Agregar Planeta">
+</form>
+
+<link rel="stylesheet" type="text/css" href="CSS.css">
+<style type="text/css">
+body
+{ 
+background-image: url(http://img2.themebin.com/hd-wallpapers/1920x1200/Campo_Planetario_1920x1200.jpg);
+background-size: 100%;
+background-repeat: no-repeat;
+}
+</style>
+</boddy>
+

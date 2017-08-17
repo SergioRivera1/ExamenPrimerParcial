@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<font color="white">
+<h1 style="text-align: center;">Home</h1>
+</font>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @homes.each do |home| %>
+      <tr>
+        <td><%= link_to 'Show', home %></td>
+        <td><%= link_to 'Edit', edit_home_path(home) %></td>
+        <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="btn-group btn-group-justified">
+    <a style="color:white;" href="/planets" class="btn btn-primary">Nuevo Planeta</a>
+    <a style="color:white;" href="/moons" class="btn btn-primary">Nueva Luna</a>
+    <a style="color:white;" href="/galaxies" class="btn btn-primary">Nueva Galaxia</a>
+  </div>
+</div>
+
+</body>
+</html>
+
+<link rel="stylesheet" type="text/css" href="CSS.css">
+<style type="text/css">
+body
+{ 
+background-image: url(https://tse3.mm.bing.net/th?id=OIP.jJc0jsfPmTRaSUl-ukMXkAEsC7&pid=15.1&P=0&w=289&h=181);
+background-size: 100%;
+background-repeat: no-repeat;
+}
+</style>
+</boddy>

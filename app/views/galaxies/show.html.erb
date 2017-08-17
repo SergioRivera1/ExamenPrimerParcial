@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @galaxy.name %>
+</p>
+
+<p>
+  <strong>Planetas:</strong>
+  <%= @galaxy.planetas %>
+</p>
+
+<p>
+  <strong>Estrellas:</strong>
+  <%= @galaxy.estrellas %>
+</p>
+
+<%= link_to 'Edit', edit_galaxy_path(@galaxy) %> |
+<%= link_to 'Back', galaxies_path %>

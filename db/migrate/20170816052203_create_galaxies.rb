@@ -1,0 +1,11 @@
+class CreateGalaxies < ActiveRecord::Migration[5.1]
+  def change
+    create_table :galaxies do |t|
+      t.string :name
+      t.integer :planetas
+      t.text :estrellas
+
+      t.timestamps
+    end
+  end
+end

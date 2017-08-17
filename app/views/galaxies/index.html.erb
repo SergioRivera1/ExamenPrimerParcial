@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- <font color="white"> -->
+<h1 style="text-align: center;">Galaxia</h1>
+<div class="container">
+  <table class="table">
+    <thead>
+   <tr>
+      <th>Nombre</th>
+      <th>Cantidad de Planetas</th>
+      <th>Aprox. Estrellas</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @galaxies.each do |galaxy| %>
+      <tr>
+        <td><%= galaxy.name %></td>
+        <td><%= galaxy.planetas %></td>
+        <td><%= galaxy.estrellas %></td>
+        <td><%= link_to 'Mostrar', galaxy %></td>
+        <td><%= link_to 'Editar', edit_galaxy_path(galaxy) %></td>
+        <td><%= link_to 'Eliminar', galaxy, method: :delete, data: { confirm: 'Esta seguro de eliminar?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<form>
+
+<input class="My Button" onclick="window.location.href='/homes'" type="button" value="Home">
+<input class="My Button" onclick="window.location.href='/galaxies/new'" type="button" value="Agregar Galaxia">
+
+</form>
+
+<link rel="stylesheet" type="text/css" href="CSS.css">
+<style type="text/css">
+body
+{ 
+background-image: url(http://wallpapermonkey.com/wp-content/uploads/2016/08/blue-galaxy-wallpaper-HD5.jpg);
+background-size: 100%;
+background-repeat: no-repeat;
+}
+</style>
+</boddy>
+
